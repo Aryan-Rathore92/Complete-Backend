@@ -28,7 +28,7 @@ async function registerUser(req, res){
         role
     })
 
-    const token = jwt.sign({
+    const token = jwt.sign({ // This method does create token
         id: user._id,
         role: user.role
     }, process.env.JWT_SECRET);

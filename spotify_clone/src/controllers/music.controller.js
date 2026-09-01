@@ -53,9 +53,9 @@ async function createAlbum(req, res){
 async function getAllMusics(req, res){
     // const musics = await musicModel.find().populate("artist"); // This gives data of artist/user not id
     const musics = await musicModel
-        .find() // This give only artist/user id
-        .skip(2) // This skip 2 id
-        .limit(10) // Maximum 10 id ayegi request karne par
+        .find() // This give only artist/user id(music)
+        .skip(2) // This skip 2 id(2 musics)
+        .limit(10) // Maximum 10 id(musics) ayegi request karne par
 
     res.status(200).json({
         message: "Music fetch successfully",
@@ -65,7 +65,8 @@ async function getAllMusics(req, res){
 
 async function getAllAlbums(req, res){
     const albums = await albumModel.find().select("title artist").populate("artist", "username email");
-
+    /*Find all albums, return only the title and artist fields, then replace the artist ID with the artist's username and email.*/
+    
     res.status(200).json({
         message: "Albums fetch successfully",
         albums: albums

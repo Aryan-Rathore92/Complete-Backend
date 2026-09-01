@@ -1,7 +1,7 @@
 const express = require('express');
 const noteModel = require('./models/note.model')
 
-const app = express();
+const app = express(); // This is the server instance
 app.use(express.json()); // This is middleware use for get data from body
 
 

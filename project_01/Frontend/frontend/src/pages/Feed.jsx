@@ -27,8 +27,8 @@ const Feed = () => {
     
   return (
     <>
-    <button onClick={backToHome} className='bg-red-400 rounded h-auto w-fit font-bold m-10 flex'> <ArrowLeft /> Back to Home</button>
-    <section className='feed-section'>
+    <button onClick={backToHome} className='bg-red-400 rounded h-auto w-fit font-bold m-10 flex cursor-pointer'> <ArrowLeft /> Back to Home</button>
+    <section className='feed-section flex flex-wrap'>
       { posts.length > 0 ? (posts.map((post)=>(
          <div key={post._id} className='post-card'>
             <img src={post.image} alt={post.caption} />

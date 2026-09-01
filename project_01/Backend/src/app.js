@@ -8,7 +8,7 @@ const cors = require('cors');
 
 const app = express();
 
-app.use(express.json());// Use this middleware for covert data into readable form and this use for raw text
+app.use(express.json());// Use this middleware for convert data into readable form and this use for raw text
 app.use(cors()); // This is also a middleware
 
 const upload = multer({storage: multer.memoryStorage() }); // middleware to read file and this use for form data 

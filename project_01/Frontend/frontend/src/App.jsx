@@ -7,12 +7,13 @@ const App = () => {
 
 
   return (
-    <Router>
-      <Routes>
-        <Route path='/create-post' element={<CreatePost/>}/>
+  <Router>
+    <Routes>
         <Route path='/feed' element={<Feed/>}/>
+        <Route path='/create-post' element={<CreatePost/>}/>
+        <Route path='/' element={<CreatePost/>}/>
       </Routes>
-    </Router>
+  </Router>
   )
 }
 
